@@ -7,7 +7,7 @@ packages:
   - spicetify-cli
   - mpv
   - ttf-google-fonts-typewolf
-  - ttf-fantasque-sans-git
+  - ttf-fantasque-sans-mono
   - ttf-twemoji-color
 
 remove_packages: []
