@@ -3,35 +3,20 @@ packages:
   - ansible
   - base-devel
   - curl
-  - docker-compose
   - docker
+  - docker-compose
+  - firefox
   - fzf
+  - gimp
+  - guvcview
   - htop
+  - inkscape
   - jq
-  # - libbz2-dev
-  # - libffi-dev
-  # - libffi-dev
-  # - liblzma-dev
-  # - liblzma-dev
-  # - libncurses5-dev
-  # - libreadline-dev
-  # - libsqlite3-dev
-  # - libssl-dev
-  # - llvm
+  - kitty
+  - libreoffice
   - make
-  # - python-openssl
-  # - tk-dev
-  - wget
-  # - xz-utils
-  # - zlib1g-dev
+  - midori
   - ripgrep
+  - wget
 
-  # GUI
-  # - chromium-browser
-  # - gnome-boxes
-  # - gnome-icon-theme
-  # - gnome-keyring
-  # - i3lock
-
-remove_packages:
-  - gnome-shell-extension-ubuntu-dock
+remove_packages: []
