@@ -1,17 +1,18 @@
-- name: Install dep apt package
-  apt:
-    name: go-dep
+- name: Install dep
+  community.general.pacman:
+    name: dep
+    state: present
   become: yes
   become_method: sudo
   become_user: root
 
 - name: Add golang plugin to asdf
-  command: "${HOME}/.asdf/bin/asdf plugin-add golang"
+  command: "asdf plugin-add golang"
   register: golang_add
   failed_when: golang_add == 2
 
 - name: Install golang {{version}} with asdf
-  command: "${HOME}/.asdf/bin/asdf install golang {{version}}"
+  command: "asdf install golang {{version}}"
 
 - name: Set global version for golang to {{version}}
-  command: "${HOME}/.asdf/bin/asdf global golang {{version}}"
+  command: "asdf global golang {{version}}"

@@ -30,9 +30,6 @@ _sandbox
 
 .python-version
 
-# throwaway code
-t.py
-
 # vim session
 .session
 

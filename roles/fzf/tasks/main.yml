@@ -1,3 +1,11 @@
 - name: Install fzf
   apt: name=fzf state=present
   when: ansible_os_family == "Debian"
+- name: Install fzf
+  when: ansible_os_family == "Arch Linux"
+  community.general.pacman:
+    name: fzf
+    state: present
+  become: yes
+  become_user: root
+  become_method: sudo

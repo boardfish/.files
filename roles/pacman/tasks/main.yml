@@ -1,23 +1,24 @@
-- name: Upgrade apt
-  apt: upgrade=yes
+- name: Run the equivalent of "pacman -Syu" as a separate step
+  community.general.pacman:
+    update_cache: yes
+    upgrade: yes
   when: package_upgrade
   become: yes
   become_user: root
   become_method: sudo
 
-- name: Install apt packages
-  apt:
+- name: Install package from repo
+  community.general.pacman:
     name: "{{ item }}"
-    update_cache: yes
+    state: present
   become: yes
   become_user: root
   become_method: sudo
   loop: "{{ packages }}"
 
-- name: Remove apt packages
-  apt:
+- name: Remove packages
+  community.general.pacman:
     name: "{{ item }}"
-    update_cache: yes
     state: absent
   become: yes
   become_user: root

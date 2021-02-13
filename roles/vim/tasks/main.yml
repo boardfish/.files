@@ -1,6 +1,8 @@
 # Installation
 - import_tasks: debian.yml
   when: ansible_os_family == "Debian"
+- import_tasks: arch_linux.yml
+  when: ansible_os_family == "Arch Linux"
 - import_tasks: redhat.yml
   when: ansible_os_family == "RedHat"
 - import_tasks: mac.yml
@@ -17,13 +19,10 @@
 - name: Makes sure autoload directory exists
   file: path="{{dotfiles_user_home}}/.vim/autoload" state=directory
 
-- name: Make suer vim-plug directory exists
-  file: path="{{ dotfiles_user_home }}/.local/share/nvim/site/autoload" state=directory
-
 - name: Install vim-plug
   get_url:
     url: https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-    dest: "{{ dotfiles_user_home }}/.local/share/nvim/site/autoload/plug.vim"
+    dest: "{{ dotfiles_user_home }}/.vim/autoload/plug.vim"
 
 # Snippets
 - name: Makes sure UltiSnips directory exists
@@ -55,18 +54,6 @@
   file:
     src: "{{ dotfiles_home }}/roles/vim/files/vimrc"
     dest: "{{dotfiles_user_home}}/.vimrc"
-    state: link
-
-- name: Create neovim config directory
-  file:
-    path: "~/.config/nvim"
-    state: directory
-    mode: "0755"
-
-- name: Symlink vimrc to nvim/init.vim
-  file:
-    src: "{{ dotfiles_home }}/roles/vim/files/vimrc"
-    dest: "~/.config/nvim/init.vim"
     state: link
 
 - name: Install plugins

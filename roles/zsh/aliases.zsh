@@ -7,6 +7,13 @@ alias lj='jobs'
 alias reload!='. ~/.zshrc'
 alias vi="vim"
 alias v="vim"
-alias k="kubectl"
+alias q="exit"
 
 alias timezsh="time zsh -i -c echo"
+
+alias gc="git checkout"
+alias gco="git commit"
+alias gl="git log"
+alias gp="git pull"
+alias gpush="git push"
+alias gs="git status"

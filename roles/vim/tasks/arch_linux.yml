@@ -1,0 +1,7 @@
+- name: Install vim with pacman
+  community.general.pacman:
+    name: gvim
+    state: present
+  become: yes
+  become_user: root
+  become_method: sudo

@@ -1,6 +1,9 @@
 dotfiles_user_home: "{{ '~' | expanduser }}"
-dotfiles_home: "{{ dotfiles_user_home }}/.dotfiles"
+dotfiles_home: "{{ dotfiles_user_home }}/.files"
 
-full_name: Kyle Espinola
-git_user: kespinola
-git_email: kyle.s.espinola@gmail.com
+full_name: Simon Fish
+git_user: si
+git_email: si@mon.fish
+
+asdf_env:
+  ASDF_DOWNLOADS_FOLDER: "{{ dotfiles_user_home }}/.asdf/downloads"

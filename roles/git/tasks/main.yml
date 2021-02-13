@@ -1,5 +1,7 @@
 - name: Install git
-  apt: name=git state=present
+  community.general.pacman:
+    name: git
+    state: present
   become: yes
   become_user: root
   become_method: sudo

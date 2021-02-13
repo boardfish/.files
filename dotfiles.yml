@@ -4,12 +4,9 @@
     - role: git
       tags:
         - git
-    - role: apt
+    - role: pacman
       tags:
-        - apt
-    - role: snap
-      tags:
-        - snap
+        - pacman
     - role: zsh
       tags:
         - zsh
@@ -19,30 +16,19 @@
     - role: vim
       tags:
         - vim
-    - role: tmux
-      tags:
-        - tmux
+    # TODO: kitty
+    # - role: tmux
+    #   tags:
+    #     - tmux
     - role: asdf
       tags:
         - asdf
-    - role: python
-      tags:
-        - python
-    - role: terraform
-      tags:
-        - terraform
     - role: golang
       tags:
         - golang
     - role: ruby
       tags:
         - ruby
-    - role: erlang
-      tags:
-        - erlang
-    - role: elixir
-      tags:
-        - elixir
     - role: node
       tags:
         - node
