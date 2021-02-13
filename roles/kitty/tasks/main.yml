@@ -1,0 +1,25 @@
+- name: Clone kitty_themes
+  register: clone_kitty_themes
+  git:
+    repo: git@github.com:dexpota/kitty-themes.git 
+    dest: ~/.config/kitty/kitty-themes
+    depth: 1
+- name: Symlink theme
+  file:
+    src: "{{dotfiles_user_home}}/.config/kitty//kitty-themes/themes/Solarized_Dark.conf"
+    dest: "{{dotfiles_user_home}}/.config/kitty/theme.conf"
+    state: link
+- name: Check if kitty.conf exists
+  stat: path="{{dotfiles_user_home}}/.config/kitty/kitty.conf"
+  register: kitty_conf_stat
+  failed_when: False
+- name: Backup kitty.conf
+  command: mv {{dotfiles_user_home}}/.config/kitty/kitty.conf {{dotfiles_user_home}}/.config/kitty/kitty.conf.bak
+  args:
+    creates: "{{dotfiles_user_home}}/.config/kitty/kitty.conf.bak"
+  when: kitty_conf_stat.stat.exists
+- name: Symlink config
+  file:
+    src: "{{ dotfiles_home }}/roles/kitty/files/kitty.conf"
+    dest: "{{dotfiles_user_home}}/.config/kitty/kitty.conf"
+    state: link
