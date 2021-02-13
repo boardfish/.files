@@ -6,5 +6,8 @@ packages:
   - spicetify-themes-git
   - spicetify-cli
   - mpv
+  - ttf-google-fonts-typewolf
+  - ttf-fantasque-sans-git
+  - ttf-twemoji-color
 
 remove_packages: []
