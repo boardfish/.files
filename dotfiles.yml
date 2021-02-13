@@ -16,6 +16,9 @@
     - role: vim
       tags:
         - vim
+    - role: codium
+      tags:
+        - codium
     # TODO: kitty
     # - role: tmux
     #   tags:

@@ -1,0 +1,19 @@
+{
+    "editor.fontFamily": "'Fantasque Sans Mono', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "files.trimFinalNewlines": true,
+    "files.insertFinalNewline": true,
+    "window.zoomLevel": 0,
+    "editor.fontSize": 16,
+    "editor.tabSize": 2,
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "prettier.semi": false,
+    "workbench.colorTheme": "Base16 Solarized Dark",
+    "ruby.rubocop.executePath": "/home/si/.rbenv/shims/",
+    "editor.rulers": [
+        80,
+        120
+    ],
+    "editor.codeActionsOnSave": null
+}

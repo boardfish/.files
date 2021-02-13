@@ -1,12 +1,14 @@
 # TODO: install yay
 
 - name: Clone yay
+  register: clone_yay
   git:
     repo: https://aur.archlinux.org/yay.git
-    dest: "~/.files/tmp"
+    dest: "/tmp/yay"
 - name: Install yay
+  when: clone_yay.changed
   shell: |
-    cd ~/.files/tmp
+    cd /tmp/yay
     makepkg -si --noconfirm
 - name: Install package from AUR
   command: yay -S --noconfirm {{ item }}

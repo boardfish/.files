@@ -1,0 +1,17 @@
+# Configuration
+- name: Check if settings.json exists
+  stat: path="{{dotfiles_user_home}}/.config/VSCodium/User/settings.json"
+  register: settings_stat
+  failed_when: False
+
+- name: Backup settings.json
+  command: mv {{dotfiles_user_home}}/.config/VSCodium/User/settings.json {{dotfiles_user_home}}/.config/VSCodium/User/settings.json.bak
+  args:
+    creates: "{{dotfiles_user_home}}/.config/VSCodium/User/settings.json.bak"
+  when: settings_stat.stat.exists
+
+- name: Symlink settings.json
+  file:
+    src: "{{ dotfiles_home }}/roles/codium/files/settings.json"
+    dest: "{{dotfiles_user_home}}/.config/VSCodium/User/settings.json"
+    state: link
