@@ -17,3 +17,5 @@ alias gl="git log"
 alias gp="git pull"
 alias gpush="git push"
 alias gs="git status"
+
+eval "$(thefuck --alias)"
