@@ -29,6 +29,9 @@
     - role: golang
       tags:
         - golang
+    - role: aur
+      tags:
+        - aur
     - role: ruby
       tags:
         - ruby

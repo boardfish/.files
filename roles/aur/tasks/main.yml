@@ -1,0 +1,16 @@
+# TODO: install yay
+
+- name: Clone yay
+  git:
+    repo: https://aur.archlinux.org/yay.git
+    dest: "~/.files/tmp"
+- name: Install yay
+  shell: |
+    cd ~/.files/tmp
+    makepkg -si --noconfirm
+- name: Install package from AUR
+  command: yay -S --noconfirm {{ item }}
+  loop: "{{ packages }}"
+- name: Remove packages
+  command: yay -R --noconfirm {{ item }}
+  loop: "{{ remove_packages }}"

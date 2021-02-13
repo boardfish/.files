@@ -1,0 +1,10 @@
+packages:
+  - vscodium-bin
+  - spotify
+  - figma-linux
+  - 1password
+  - spicetify-themes-git
+  - spicetify-cli
+  - mpv
+
+remove_packages: []
