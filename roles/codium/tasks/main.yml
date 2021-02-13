@@ -15,3 +15,7 @@
     src: "{{ dotfiles_home }}/roles/codium/files/settings.json"
     dest: "{{dotfiles_user_home}}/.config/VSCodium/User/settings.json"
     state: link
+
+- name: Install extension
+  command: "codium --install-extension {{ item }}"
+  loop: "{{ extensions }}"
