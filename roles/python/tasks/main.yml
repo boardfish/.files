@@ -12,22 +12,6 @@
 - name: Set global versions for python
   command: "asdf global python {{python3_version}} {{python2_version}}"
 
-- name: Check if pytest.ini file exists
-  stat: path="{{dotfiles_user_home}}/pytest.ini"
-  register: pytest_stat
-
-- name: Back up pytest.ini file
-  command: mv ~/pytest.ini ~/pytest.ini.bak
-  args:
-    creates: "{{dotfiles_user_home}}/pytest.ini"
-  when: pytest_stat.stat.exists
-
-- name: Link pytest.ini file
-  file:
-    src: "{{dotfiles_home}}/roles/python/files/pytest.ini"
-    dest: "{{dotfiles_user_home}}/pytest.ini"
-    state: link
-
 - name: Install pipx
   tags: pipx
   shell: "PYENV_VERSION=system python3 -m pip install --user pipx && PYENV_VERSION=system python3 -m pipx install pipx"

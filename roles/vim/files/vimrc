@@ -18,7 +18,7 @@ nnoremap <C-b> :CtrlPBuffer<CR>
 map <C-t> :CtrlPBufTag<CR>
 " Make ctrlp faster
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
-if has('python') ||  has('python3')
+if has('python3') ||  has('python')
   " Faster and more accurate fuzzy-matching
   Plug 'felikz/ctrlp-py-matcher'
   let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
@@ -99,7 +99,7 @@ let g:airline_extensions = ['branch', 'ctrlp', 'tabline', 'ale', 'whitespace']
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'jszakmeister/vim-togglecursor'  " change cursor shape when entering insert mode
 " Snippets
-if version >= 704 && has('python') || has('python3') | Plug 'SirVer/ultisnips' | endif
+Plug 'SirVer/ultisnips'
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 Plug 'honza/vim-snippets'

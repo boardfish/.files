@@ -23,6 +23,9 @@
     - role: asdf
       tags:
         - asdf
+    - role: python
+      tags:
+        - python
     - role: golang
       tags:
         - golang
