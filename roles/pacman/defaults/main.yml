@@ -8,6 +8,7 @@ packages:
   - firefox
   - fzf
   - gimp
+  - gnome-tweaks
   - guvcview
   - htop
   - inkscape
@@ -16,7 +17,11 @@ packages:
   - libreoffice
   - make
   - midori
+  - obs-gnome-screencast
+  - obs-studio
+  - pipewire
   - ripgrep
+  - slack-desktop
   - wget
   - zip
 
