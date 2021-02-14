@@ -111,6 +111,7 @@ export FZF_DEFAULT_COMMAND='rg --hidden --ignore .git -g ""'
 
 export GOPATH=$HOME/code/go
 export PATH=$PATH:$(go env GOPATH)/bin
+export PATH="$PATH:$HOME/.asdf/installs/python/3.9.1/bin"
 
 source $HOME/.files/roles/zsh/aliases.zsh
 source $HOME/.files/roles/zsh/completion.zsh
