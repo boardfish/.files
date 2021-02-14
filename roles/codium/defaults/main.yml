@@ -1,12 +1,12 @@
 extensions:
-  - castwide.solargraph
+  # - castwide.solargraph
   - coenraads.bracket-pair-colorizer-2
   - eamodio.gitlens
   - esbenp.prettier-vscode
   - golf1052.base16-generator
   - kaiwood.endwise
-  - misogi.ruby-rubocop
+  # - misogi.ruby-rubocop
   - rebornix.ruby
-  - stkb.rewrap
+  # - stkb.rewrap
   - vscodevim.vim
   - wingrunr21.vscode-ruby

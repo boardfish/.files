@@ -6,7 +6,9 @@ packages:
   - spicetify-themes-git
   - spicetify-cli
   - mpv
-  - ttf-google-fonts-typewolf
+  - obs-gnome-screencast
+  - slack-desktop
+  - ttf-google-fonts-git
   - ttf-fantasque-sans-mono
   - ttf-twemoji-color
 

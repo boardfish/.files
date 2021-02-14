@@ -9,6 +9,18 @@
   args:
     creates: "{{dotfiles_user_home}}/.config/VSCodium/User/settings.json.bak"
   when: settings_stat.stat.exists
+- name: Check config directory exists
+  stat:
+    path: "{{dotfiles_user_home}}/.config/VSCodium/User"
+  register: codium_config_dir
+  when: settings_stat.stat.exists == False
+- name: "Ansible Create directory if not exists"
+  file:
+    path: "{{dotfiles_user_home}}/.config/VSCodium/User"
+    state: directory
+  when:
+    - settings_stat.stat.exists == False
+    - codium_config_dir.stat.exists == false
 
 - name: Symlink settings.json
   file:

@@ -9,6 +9,7 @@ packages:
   - fzf
   - gimp
   - gnome-tweaks
+  - gvim
   - guvcview
   - htop
   - inkscape
@@ -17,11 +18,9 @@ packages:
   - libreoffice
   - make
   - midori
-  - obs-gnome-screencast
   - obs-studio
   - pipewire
   - ripgrep
-  - slack-desktop
   - wget
   - zip
 

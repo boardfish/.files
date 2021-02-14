@@ -1,8 +1,0 @@
-- name: Clone asdf repository
-  git:
-    repo: git@github.com:asdf-vm/asdf.git
-    dest: "~/.asdf"
-    version: v0.8.0
-# Plugin manager
-- name: Make sure download directory exists
-  file: path="{{ asdf_env.ASDF_DOWNLOADS_FOLDER }}" state=directory

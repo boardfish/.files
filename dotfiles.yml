@@ -23,9 +23,6 @@
     # - role: tmux
     #   tags:
     #     - tmux
-    - role: asdf
-      tags:
-        - asdf
     - role: python
       tags:
         - python
