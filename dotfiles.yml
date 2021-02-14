@@ -19,10 +19,9 @@
     - role: codium
       tags:
         - codium
-    # TODO: kitty
-    # - role: tmux
-    #   tags:
-    #     - tmux
+    - role: kitty
+      tags:
+        - kitty
     - role: python
       tags:
         - python
