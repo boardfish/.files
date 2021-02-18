@@ -2,10 +2,12 @@ packages:
   - vscodium-bin
   - spotify
   - figma-linux
+  - heroku-cli-bin
   - 1password
   - spicetify-themes-git
   - spicetify-cli
   - mpv
+  - mailhog-bin
   - obs-gnome-screencast
   - slack-desktop
   - ttf-google-fonts-git

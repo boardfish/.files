@@ -20,6 +20,7 @@ packages:
   - midori
   - obs-studio
   - pipewire
+  - postgresql
   - ripgrep
   - wget
   - zip
