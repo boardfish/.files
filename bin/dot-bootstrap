@@ -9,8 +9,9 @@ fi
 
 if ! [ -x "$(command -v ansible)" ]; then
   sudo pacman -Syu
-  sudo pacman -S ansible asdf-vm
-  . /opt/asdf-vm/asdf.sh
+  sudo pacman -S ansible
+  git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.8.0
+  . $HOME/.asdf/asdf.sh
 fi
 
 ansible-playbook -i ~/.files/hosts ~/.files/dotfiles.yml --ask-become-pass --tags $tags -vv
