@@ -9,6 +9,11 @@ alias vi="vim"
 alias v="vim"
 alias q="exit"
 
+alias code="codium"
+
+alias raise="cd ~/code/raisedev"
+alias .files="cd ~/.files"
+
 alias timezsh="time zsh -i -c echo"
 
 alias gc="git checkout"
@@ -19,3 +24,4 @@ alias gpush="git push"
 alias gs="git status"
 
 eval "$(thefuck --alias)"
+eval "$(hub alias -s)"
