@@ -5,13 +5,16 @@ packages:
   - curl
   - docker
   - docker-compose
+  - ethtool
   - firefox
   - fzf
   - gimp
   - gnome-tweaks
+  - gnu-netcat
   - gvim
   - guvcview
   - htop
+  - hub
   - inkscape
   - jq
   - kitty
