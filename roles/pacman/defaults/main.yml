@@ -25,6 +25,7 @@ packages:
   - pipewire
   - postgresql
   - ripgrep
+  - v4l2loopback-dkms
   - wget
   - zip
 
