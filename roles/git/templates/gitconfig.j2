@@ -3,6 +3,7 @@
 [user]
         name = {{ full_name }}
         email = {{ git_email }}
+        signingKey = {{ signing_key }}
 [alias]
         a = add
         st = status
@@ -48,6 +49,8 @@
         status = auto
         branch = auto
         ui = true
+[commit]
+        gpgSign = true
 [core]
         excludesfile = ~/.gitignore_global
         editor = vim

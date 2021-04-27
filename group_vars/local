@@ -4,6 +4,7 @@ dotfiles_home: "{{ dotfiles_user_home }}/.files"
 full_name: Simon Fish
 git_user: si
 git_email: si@mon.fish
+signing_key: B184D12D0AC5C2FA
 
 asdf_env:
   ASDF_DOWNLOADS_FOLDER: "{{ dotfiles_user_home }}/.asdf/downloads"
