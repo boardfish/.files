@@ -6,7 +6,7 @@
     depth: 1
 - name: Symlink theme
   file:
-    src: "{{dotfiles_user_home}}/.config/kitty//kitty-themes/themes/Solarized_Dark.conf"
+    src: "{{dotfiles_user_home}}/.config/kitty//kitty-themes/themes/Material.conf"
     dest: "{{dotfiles_user_home}}/.config/kitty/theme.conf"
     state: link
 - name: Check if kitty.conf exists
