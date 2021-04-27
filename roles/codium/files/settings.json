@@ -9,11 +9,18 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "prettier.semi": false,
-    "workbench.colorTheme": "Base16 Solarized Dark",
+    "workbench.colorTheme": "Base16 Google Light",
     "ruby.rubocop.executePath": "/home/si/.rbenv/shims/",
     "editor.rulers": [
         80,
         120
     ],
-    "editor.codeActionsOnSave": null
+    "editor.codeActionsOnSave": null,
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "trailing-spaces.trimOnSave": true,
+    "search.exclude": {
+        "**/.yarn": true
+    }
 }
