@@ -24,5 +24,11 @@
     },
     "timeline.excludeSources": [],
     "workbench.editor.scrollToSwitchTabs": true,
-    "workbench.sideBar.location": "right"
+    "workbench.sideBar.location": "right",
+    "files.associations": {
+        "*.tt": "erb"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    }
 }
